@@ -1,0 +1,27 @@
+name: Privacy question / 개인정보 문의
+description: Questions about a privacy policy or ads and data. / 개인정보처리방침, 광고, 데이터 관련 문의
+title: "[Privacy] "
+labels: ["privacy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This page is public.** Do not write your email, phone number, advertising ID or other personal information.
+        **이 페이지는 공개됩니다.** 이메일, 전화번호, 광고 ID 등 개인정보를 적지 마세요.
+
+        Our games keep settings and rankings only on your device. Ad data is handled by Google AdMob; you can reset your advertising ID in Settings → Google → Ads.
+        게임은 설정과 랭킹을 기기에만 저장합니다. 광고 데이터는 Google AdMob이 처리하며, 광고 ID는 설정 → Google → 광고에서 재설정할 수 있습니다.
+  - type: dropdown
+    id: game
+    attributes:
+      label: Game / 게임
+      options:
+        - Jet Storm
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question / 문의 내용
+    validations:
+      required: true

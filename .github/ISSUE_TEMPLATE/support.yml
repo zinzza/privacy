@@ -1,0 +1,46 @@
+name: Game support / 게임 문의
+description: Questions, bugs or feedback about a game. / 게임 사용 문의, 버그 신고, 의견
+title: "[Support] "
+labels: ["support"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This page is public.** Do not write your email, phone number, real name or other personal information.
+        **이 페이지는 공개됩니다.** 이메일, 전화번호, 실명 등 개인정보를 적지 마세요.
+  - type: dropdown
+    id: game
+    attributes:
+      label: Game / 게임
+      options:
+        - Jet Storm
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type / 종류
+      options:
+        - Bug / 버그
+        - Question / 질문
+        - Feedback / 의견
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details / 내용
+      description: What happened, and what did you expect? / 무슨 일이 있었고, 어떻게 되길 기대했나요?
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and Android version (optional) / 기기와 안드로이드 버전 (선택)
+      placeholder: e.g. Galaxy S23, Android 15
+  - type: input
+    id: version
+    attributes:
+      label: App version (optional) / 앱 버전 (선택)
+      description: Play Store app page → About this game / Play 스토어 앱 페이지 → 게임 정보
+      placeholder: e.g. 0.7.0
